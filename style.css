@@ -1,0 +1,6 @@
+.menuPic {
+  height: 10vh;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}

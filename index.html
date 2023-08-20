@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+  <title>Ice Cream Parlor</title>
+</head>
+<!--//ANCHOR - DEBUG -->
+<style>
+  body.debug .container,
+  body.debug .container-fluid {
+    outline: 2px double blue;
+    outline-offset: -2px;
+  }
+
+  body.debug .row {
+    outline: 2px dashed red;
+    outline-offset: -2px;
+  }
+
+  body.debug [class*="col-"] {
+    outline: 2px dotted forestgreen;
+    outline-offset: -3px;
+  }
+</style>
+
+<body class="bg-success">
+
+
+
+  <!-- //ANCHOR - HEADER -->
+  <header class="container-fluid">
+    <section class="row">
+      <div class="col-12 text-center">
+        <h1>Ice Cream Parlor</h1>
+      </div>
+    </section>
+  </header>
+
+  <!-- //ANCHOR - MAINSTART -->
+  <main class="container-fluid">
+    <section class="row text-center">
+      <div class="col-12 col-md-6 p-3 border border-3">
+        <H2>Toppings</H2>
+        <div class="row">
+          <div class="col-12 col-md-4 p-3 border border-1">
+            <h6>Sprinkles</h6>
+            <img class="menuPic"
+              src="https://images.unsplash.com/photo-1516746924755-babd21844370?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3ByaW5rbGVzfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60"
+              alt="sprinkles">
+          </div>
+          <div class="col-12 col-md-4 p-3 border border-1">
+            <h6>Chocolate Chips</h6>
+            <img class="menuPic"
+              src="https://images.unsplash.com/photo-1585502866757-30ae9e509e31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2hvY29sYXRlJTIwY2hpcHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60"
+              alt="sprinkles">
+          </div>
+          <div class="col-12 col-md-4 p-3 border border-1">
+            <h6>Gummy Worms</h6>
+            <img class="menuPic"
+              src="https://images.unsplash.com/photo-1499195333224-3ce974eecb47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8R3VtbXklMjBXb3Jtc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60"
+              alt="sprinkles">
+          </div>
+        </div>
+        <h2>Vessels</h2>
+        <div class="row">
+          <div class="col-12 col-md-4 p-3 border border-1">
+            <h6>Waffle Cone</h6>
+            <img class="menuPic"
+              src="https://images.unsplash.com/photo-1559703248-dcaaec9fab78?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
+              alt="sprinkles">
+          </div>
+          <div class="col-12 col-md-4 p-3 border border-1">
+            <h6>Waffle Bowl</h6>
+            <img class="menuPic"
+              src="https://media.istockphoto.com/id/816249170/photo/waffle-bowl-on-white-background.webp?b=1&s=170667a&w=0&k=20&c=aLq2W3HYIn0aBwMclopU5qcKC2el48uKcVBMg2ptlAQ="
+              alt="sprinkles">
+          </div>
+          <div class="col-12 col-md-4 p-3 border border-1">
+            <h6>Bowl</h6>
+            <img class="menuPic"
+              src="https://media.istockphoto.com/id/1357470962/photo/plastic-food-cup-disposable.webp?b=1&s=170667a&w=0&k=20&c=DzYg2dGxvyazSDHaRQBXWH4rNSS8yM-EOi_WR6sUEu8="
+              alt="sprinkles">
+          </div>
+        </div>
+        <h2>Ice Cream</h2>
+        <div class="row">
+          <div onclick="orderVanilla()" class="col-12 col-md-4 p-3 border border-1">
+            <h6>Vanilla</h6>
+            <img class="menuPic"
+              src="https://media.istockphoto.com/id/1394658874/photo/whipped-mascarpone-cream-cheese.webp?b=1&s=170667a&w=0&k=20&c=8Fj0XMpC7vOhEVglAmbpbX3FAJ75-kGMi2odtSAGJsQ="
+              alt="sprinkles">
+          </div>
+          <div onclick="orderChocolate()" class="col-12 col-md-4 p-3 border border-1">
+            <h6>Chocolate</h6>
+            <img class="menuPic"
+              src="https://media.istockphoto.com/id/182866287/photo/chocolate-ice-cream.webp?b=1&s=170667a&w=0&k=20&c=M3UdxpQ-NtkMU6yyEtdfn2C3r30UtryjM4NyG-w4BSo="
+              alt="sprinkles">
+          </div>
+          <div onclick="orderStrawberry()" class="col-12 col-md-4 p-3 border border-1">
+            <h6>Strawberry</h6>
+            <img class="menuPic"
+              src="https://media.istockphoto.com/id/1331055257/photo/strawberry-ice-cream-texture.webp?b=1&s=170667a&w=0&k=20&c=9UZ0P8BbP45-dJCx5ivT30yG87b_qKJufKCnARGGk48="
+              alt="sprinkles">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-4 p-3 border border-1">
+            <h6>Rocky Road</h6>
+            <img class="menuPic"
+              src="https://media.istockphoto.com/id/1394524559/photo/single-scoop-of-rocky-road-ice-cream-isolated-on-a-white-background.webp?b=1&s=170667a&w=0&k=20&c=mUPdLAJAJ53eM8kBWHh8HrW86Qry2m5oDsOTJuTQCDo="
+              alt="sprinkles">
+          </div>
+          <div class="col-12 col-md-4 p-3 border border-1">
+            <h6>Pistachio</h6>
+            <img class="menuPic"
+              src="https://media.istockphoto.com/id/91361117/photo/pistachio-ice-cream.webp?b=1&s=170667a&w=0&k=20&c=3DQtirgeXU1pdHPFye3unelX4coJzJYPt3--4rbuTU4="
+              alt="sprinkles">
+          </div>
+          <div class="col-12 col-md-4 p-3 border border-1">
+            <h6>Butter Pecan</h6>
+            <img class="menuPic"
+              src="https://media.istockphoto.com/id/479515356/photo/single-scoop-of-macadamia-ice-cream-from-above-isolated.webp?b=1&s=170667a&w=0&k=20&c=Iwb06FEiBZ1mx4RjOg959rZ7wx3V7PGiZmfHH1Yy37s="
+              alt="sprinkles">
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 p-3 border border-3">
+        <h2>Cart</h2>
+        <div class="row" id="cart">
+          <div class="col-12 col-md-3 border border-1">Name</div>
+          <div class="col-12 col-md-3 border border-1">Qty</div>
+          <div class="col-12 col-md-3 border border-1">Each</div>
+          <div class="col-12 col-md-3 border border-1">Total</div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+
+</html>
